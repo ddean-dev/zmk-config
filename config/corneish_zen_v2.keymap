@@ -15,24 +15,18 @@
             label = "new_macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press>,
-                <&kp LEFT_CONTROL>,
-                <&macro_tap>,
-                <&kp LEFT_ARROW>,
-                <&macro_release>,
-                <&kp LCTRL>;
+                <&macro_press &kp LCTRL>,
+                <&macro_tap &kp LEFT_ARROW>,
+                <&macro_release &kp LCTRL>;
         };
         right_word: right_word {
             compatible = "zmk,behavior-macro";
             label = "new_macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press>,
-                <&kp LCTRL>,
-                <&macro_tap>,
-                <&kp RIGHT_ARROW>,
-                <&macro_release>,
-                <&kp LEFT_CONTROL>;
+                <&macro_press &kp LCTRL>,
+                <&macro_tap &kp RIGHT_ARROW>,
+                <&macro_release &kp LCTRL>;
         };
     };
 
