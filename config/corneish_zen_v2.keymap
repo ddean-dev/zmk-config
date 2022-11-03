@@ -24,7 +24,7 @@
 
         NumNav {
             bindings = <
- &trans  &kp EQUAL  &kp N7  &kp N8  &kp N9   &kp LEFT_BRACKET            &kp PAGE_UP      &kp LC(LEFT_ARROW)    &kp SUP_ARROW      &kp LC(RIGHT_ARROW)  &kp BACKSLASH  &kp DEL
+ &trans  &kp EQUAL  &kp N7  &kp N8  &kp N9   &kp LEFT_BRACKET            &kp PAGE_UP      &kp LC(LEFT_ARROW)    &kp UP_ARROW      &kp LC(RIGHT_ARROW)  &kp BACKSLASH  &kp DEL
  &trans  &kp MINUS  &kp N4  &kp N5  &kp N6  &kp RIGHT_BRACKET          &kp PAGE_DOWN  &kp LEFT_ARROW     &kp DOWN_ARROW  &kp RIGHT_ARROW   &kp SEMICOLON   &trans
  &trans     &kp N0  &kp N1  &kp N2  &kp N3          &kp GRAVE                &kp INS        &kp HOME  &kp K_APPLICATION          &kp END  &kp SCROLLLOCK   &trans
                             &trans  &trans             &trans                 &trans          &trans              &mo 2
