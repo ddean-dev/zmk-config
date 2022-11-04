@@ -13,10 +13,10 @@
             // |  SHIFT  |    Z    |    X    |    C    |    V    |    B    |            |    N    |    M    |    ,    |    .    |    /    |  ALTGR  |
             //                               |  LALT   |  LCTRL  |  SPACE  |            |  SPACE  |   MO 1  |  L WIN  |
             bindings = <
-                &kp TAB &kp Q &kp W &kp E &kp R &kp T                                   &kp Y &kp U &kp I &kp O &kp P &kp BSPC
-                &kp ESCAPE &kp A &kp S &kp D &kp F &kp G                                &kp H &kp J &kp K &kp L &kp APOSTROPHE &kp ENTER
-                &kp LSHFT &kp Z &kp X &kp C &kp V &kp B                                 &kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp RIGHT_ALT
-                &kp LEFT_ALT &kp LCTRL &kp SPACE                                        &kp SPACE &mo 2 &kp LWIN
+                &kp TAB &kp Q &kp W &kp E &kp R &kp T &kp Y &kp U &kp I &kp O &kp P &kp BSPC
+                &kp ESCAPE &kp A &kp S &kp D &kp F &kp G &kp H &kp J &kp K &kp L &kp APOSTROPHE &kp ENTER
+                &kp LSHFT &kp Z &kp X &kp C &kp V &kp B &kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp RIGHT_ALT
+                &kp LEFT_ALT &kp LCTRL &kp SPACE &kp SPACE &mo 2 &kp LWIN
             >;
         };
 
@@ -27,10 +27,10 @@
             // |  SHIFT  |    Z    |    X    |    C    |    V    |    B    |            |    N    |    M    |    ,    |    .    |    /    |  ALTGR  |
             //                               |  LCTRL  |  LCMD   |  SPACE  |            |  SPACE  |   MO 1  |  L OPT  |
             bindings = <
-                &kp TAB &kp Q &kp W &kp E &kp R &kp T                                   &kp Y &kp U &kp I &kp O &kp P &kp BSPC
-                &kp ESCAPE &kp A &kp S &kp D &kp F &kp G                                &kp H &kp J &kp K &kp L &kp APOSTROPHE &kp ENTER
-                &kp LSHFT &kp Z &kp X &kp C &kp V &kp B                                 &kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp RIGHT_ALT
-                &kp LCTRL &kp LCMD &kp SPACE                                            &kp SPACE &mo 3 &kp LALT
+                &kp TAB &kp Q &kp W &kp E &kp R &kp T &kp Y &kp U &kp I &kp O &kp P &kp BSPC
+                &kp ESCAPE &kp A &kp S &kp D &kp F &kp G &kp H &kp J &kp K &kp L &kp APOSTROPHE &kp ENTER
+                &kp LSHFT &kp Z &kp X &kp C &kp V &kp B &kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp RIGHT_ALT
+                &kp LCTRL &kp LCMD &kp SPACE &kp SPACE &mo 3 &kp LALT
             >;
         };
 
@@ -41,10 +41,10 @@
             // |  SHIFT  |    `    |    1    |    2    |    3    |    ]    |            |   INS   |  HOME   |   APP   |   END   | SCRLCK  |  ALTGR  |
             //                               |  LALT   |  LCTRL  |  SPACE  |            |  SPACE  |         |  FUNC   |
             bindings = <
-                &trans &kp EQUAL &kp N7 &kp N8 &kp N9 &kp N0                            &kp PAGE_UP &kp LC(LEFT_ARROW) &kp UP_ARROW &kp LC(RIGHT_ARROW) &kp BACKSLASH &kp DEL
-                &trans &kp MINUS &kp N4 &kp N5 &kp N6 &kp LEFT_BRACKET                  &kp PAGE_DOWN &kp LEFT_ARROW &kp DOWN_ARROW &kp RIGHT_ARROW &kp SEMICOLON &trans
-                &trans &kp GRAVE &kp N1 &kp N2 &kp N3 &kp RIGHT_BRACKET                 &kp INS &kp HOME &kp K_APPLICATION &kp END &kp SCROLLLOCK &trans
-                &trans &trans &trans                                                    &trans &trans &mo 4
+                &trans &kp EQUAL &kp N7 &kp N8 &kp N9 &kp N0 &kp PAGE_UP &kp LC(LEFT_ARROW) &kp UP_ARROW &kp LC(RIGHT_ARROW) &kp BACKSLASH &kp DEL
+                &trans &kp MINUS &kp N4 &kp N5 &kp N6 &kp LEFT_BRACKET &kp PAGE_DOWN &kp LEFT_ARROW &kp DOWN_ARROW &kp RIGHT_ARROW &kp SEMICOLON &trans
+                &trans &kp GRAVE &kp N1 &kp N2 &kp N3 &kp RIGHT_BRACKET &kp INS &kp HOME &kp K_APPLICATION &kp END &kp SCROLLLOCK &trans
+                &trans &trans &trans &trans &trans &mo 4
             >;
         };
 
@@ -55,10 +55,10 @@
             // |  SHIFT  |    `    |    1    |    2    |    3    |    ]    |            |   INS   |  HOME   |   APP   |   END   | SCRLCK  |  ALTGR  |
             //                               |  LALT   |  LCTRL  |  SPACE  |            |  SPACE  |         |  FUNC   |
             bindings = <
-                &trans &kp EQUAL &kp N7 &kp N8 &kp N9 &kp N0                            &kp PAGE_UP &kp LA(LEFT_ARROW) &kp UP_ARROW &kp LA(RIGHT_ARROW) &kp BACKSLASH &kp DEL
-                &trans &kp MINUS &kp N4 &kp N5 &kp N6 &kp LEFT_BRACKET                  &kp PAGE_DOWN &kp LEFT_ARROW &kp DOWN_ARROW &kp RIGHT_ARROW &kp SEMICOLON &trans
-                &trans &kp GRAVE &kp N1 &kp N2 &kp N3 &kp RIGHT_BRACKET                 &kp INS &kp LC(LEFT_ARROW) &kp K_APPLICATION &kp LC(RIGHT_ARROW) &kp SCROLLLOCK &trans
-                &trans &trans &trans                                                    &trans &trans &mo 4
+                &trans &kp EQUAL &kp N7 &kp N8 &kp N9 &kp N0 &kp PAGE_UP &kp LA(LEFT_ARROW) &kp UP_ARROW &kp LA(RIGHT_ARROW) &kp BACKSLASH &kp DEL
+                &trans &kp MINUS &kp N4 &kp N5 &kp N6 &kp LEFT_BRACKET &kp PAGE_DOWN &kp LEFT_ARROW &kp DOWN_ARROW &kp RIGHT_ARROW &kp SEMICOLON &trans
+                &trans &kp GRAVE &kp N1 &kp N2 &kp N3 &kp RIGHT_BRACKET &kp INS &kp LC(LEFT_ARROW) &kp K_APPLICATION &kp LC(RIGHT_ARROW) &kp SCROLLLOCK &trans
+                &trans &trans &trans &trans &trans &mo 4
             >;
         };
 
@@ -69,10 +69,10 @@
             // |  SHIFT  | VOL DN  |  PREV   |  PLAY   |  NEXT   | VOL UP  |            | BT NXT  | BT PRV  | BT CLR  | TO Mac  |  TO PC  |  ALTGR  |
             //                               |  LALT   |  LCTRL  |  SPACE  |            |  SPACE  |         |         |
             bindings = <
-                &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12                            &kp F19 &kp F20 &kp F21 &kp F22 &kp F23 &kp F24
-                &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6                               &kp F13 &kp F14 &kp F15 &kp F16 &kp F17 &kp F18
-                &trans &kp C_VOL_DN &kp C_PREV &kp C_PP &kp C_NEXT &kp C_VOL_UP         &bt BT_PRV &bt BT_NXT &bt BT_CLR &to 1 &to 0 &trans
-                &trans &trans &trans                                                    &trans &trans &trans
+                &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 &kp F19 &kp F20 &kp F21 &kp F22 &kp F23 &kp F24
+                &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F13 &kp F14 &kp F15 &kp F16 &kp F17 &kp F18
+                &trans &kp C_VOL_DN &kp C_PREV &kp C_PP &kp C_NEXT &kp C_VOL_UP &bt BT_PRV &bt BT_NXT &bt BT_CLR &to 1 &to 0 &trans
+                &trans &trans &trans &trans &trans &trans
             >;
         };
     };
