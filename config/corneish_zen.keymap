@@ -53,7 +53,7 @@
                 &trans &trans &trans &trans &trans &trans                               &trans &trans &trans &trans &trans &trans
                 &trans &trans &trans &trans &trans &trans                               &trans &trans &trans &trans &trans &trans
                 &trans &trans &trans &trans &trans &trans                               &trans &trans &trans &trans &trans &trans
-                &kp LCTRL &kp LCMD &trans                                               &trans &trans &kp LALT
+                &trans &kp LCTRL &kp LCMD                                               &trans &trans &kp LALT
             >;
         };
 
