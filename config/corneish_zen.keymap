@@ -102,7 +102,7 @@
         combo_osl {
             timeout-ms = <50>;
             key-positions = <36 37 38>;
-            bindings = <&sl>;
+            bindings = <&sl L_FN>;
         };
     };
     conditional_layers {
