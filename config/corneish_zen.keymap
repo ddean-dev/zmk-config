@@ -112,7 +112,4 @@
             then-layer = <L_MAC_MOD>;
         };
     };
-    &sl {
-      release-after-ms = <5000>;
-    };
 };
