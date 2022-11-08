@@ -62,7 +62,7 @@
             bindings = <
                 &trans &trans &trans &trans &trans &trans                               &trans &kp LC(LEFT) &trans &kp LC(RIGHT) &trans &trans
                 &trans &trans &trans &trans &trans &trans                               &trans &trans &trans &trans &trans &trans
-                &trans &trans &trans &trans &trans &trans                               &trans &kp HOME &k K_APP &kp END &kp SLCK &trans
+                &trans &trans &trans &trans &trans &trans                               &trans &kp HOME &kp K_APP &kp END &kp SLCK &trans
                 &trans &trans &trans                                                    &trans &trans &trans
             >;
         };
