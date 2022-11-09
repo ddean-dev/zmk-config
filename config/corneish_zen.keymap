@@ -4,9 +4,11 @@
 
 #define L_MAC 0
 #define L_PC 1
-#define L_MOD 2
-#define L_PC_MOD 3
-#define L_FN 4
+#define L_FN 2
+#define L_FN_PC 3
+#define L_NAV 4
+#define L_NAV_PC 5
+#define L_SYS 6
 
 / {
     chosen {
@@ -19,12 +21,12 @@
             // |   TAB   |    Q    |    W    |    E    |    R    |    T    |            |    Y    |    U    |    I    |    O    |    P    |  BSPC   |
             // |   ESC   |    A    |    S    |    D    |    F    |    G    |            |    H    |    J    |    K    |    L    |    '    | RETURN  |
             // |  LSHFT  |    Z    |    X    |    C    |    V    |    B    |            |    N    |    M    |    ,    |    .    |    /    |  ALTGR  |
-            //                               |  LALT   |  LCTRL  |  SPACE  |            |  SPACE  |   Mod   |  L WIN  |
+            //                               |  LCTRL  |  LCMD  |  SPACE  |             |  SPACE  |   NAV   |  LALT   |
             bindings = <
                 &kp TAB &kp Q &kp W &kp E &kp R &kp T                                   &kp Y &kp U &kp I &kp O &kp P &kp BSPC
                 &kp ESCAPE &kp A &kp S &kp D &kp F &kp G                                &kp H &kp J &kp K &kp L &kp APOSTROPHE &kp ENTER
                 &kp LSHFT &kp Z &kp X &kp C &kp V &kp B                                 &kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp RALT
-                &kp LCTRL &kp LCMD &kp SPACE                                            &kp SPACE &mo L_MOD &kp LALT
+                &kp LCTRL &kp LCMD &mo L_FN                                             &kp SPACE &mo L_NAV &kp LALT
             >;
         };
         PC {
@@ -32,7 +34,7 @@
             // |         |         |         |         |         |         |            |         |         |         |         |         |         |
             // |         |         |         |         |         |         |            |         |         |         |         |         |         |
             // |         |         |         |         |         |         |            |         |         |         |         |         |         |
-            //                               |  LCTRL  |  LCMD   |         |            |         |         |  LOPT   |
+            //                               |  LALT   |  LCTRL  |         |            |         |         |  LWIN   |
             bindings = <
                 &trans &trans &trans &trans &trans &trans                               &trans &trans &trans &trans &trans &trans
                 &trans &trans &trans &trans &trans &trans                               &trans &trans &trans &trans &trans &trans
@@ -40,21 +42,47 @@
                 &kp LALT &kp LCTRL &trans                                               &trans &trans &kp LWIN
             >;
         };
-        Mod {
-            label = "Mod";
-            // |         |    1    |    2    |    3    |    4    |    5    |            |  PG_UP  | L_WORD  |   UP    | R_WORD  |    \    |   DEL   |
-            // |         |    6    |    7    |    8    |    9    |    0    |            | PG_DOWN |  LEFT   |  DOWN   |  RIGHT  |    ;    |         |
-            // |         |    -    |    =    |    '    |    [    |    ]    |            |   INS   |  HOME   |         |   END   |         |         |
+        Function {
+            label = "Fn";
+            // |    `    |    1    |    2    |    3    |    4    |    5    |            |    6    |    7    |    8    |    9    |    0    |  PSCRN  |
+            // |   F1    |   F2    |   F3    |   F4    |   F5    |   F6    |            |   F7    |   F8    |   F9    |   F10   |   F11   |   F12   |
+            // |         | VOL DN  |  PREV   |  PLAY   |  NEXT   | VOL UP  |            |         |    [    |    ]    |    -    |    =    |         |
             //                               |         |         |         |            |         |         |         |
             bindings = <
-                &trans &kp N1 &kp N2 &kp N3 &kp N4 &kp N5                               &kp PAGE_UP &kp LA(LEFT) &kp UP &kp LA(RIGHT) &kp BSLH &kp DEL
-                &trans &kp N6 &kp N7 &kp N8 &kp N9 &kp N0                               &kp PAGE_DOWN &kp LEFT &kp DOWN &kp RIGHT &kp SEMI &trans
-                &trans &kp MINUS &kp EQUAL &kp GRAVE &kp LBKT &kp RBKT                  &kp INS &kp LG(LEFT) &none &kp LG(RIGHT) &none &trans
+                &kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5                            &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp LG(LS(4)) 
+                &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6                               &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
+                &trans &none &none &none &none &kp LG(LS(4))                            &none &kp LBKT &kp RBKT &kp MINUS &kp EQUAL &trans
                 &trans &trans &trans                                                    &trans &trans &trans
             >;
         };
-        PcMod {
-            label = "Mod";
+        FunctionPC {
+            label = "Fn";
+            // |         |         |         |         |         |         |            |         |         |         |         |         |  PSCRN  |
+            // |         |         |         |         |         |         |            |         |         |         |         |         |         |
+            // |         |         |         |         |         |         |            |  BREAK  |         |         |         |         |         |
+            //                               |         |         |         |            |         |         |         |
+            bindings = <
+                &trans &trans &trans &trans &trans &trans                               &trans &trans &trans &trans &trans &kp PSCRN
+                &trans &trans &trans &trans &trans &trans                               &trans &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans &trans                               &kp PAUSE_BREAK &trans &trans &trans &trans &trans
+                &trans &trans &trans                                                    &trans &trans &trans
+            >;
+        };
+        Navigation {
+            label = "Nav";
+            // |         |         |         |         |         |         |            |  PG_UP  | L_WORD  |   UP    | R_WORD  |    \    |   DEL   |
+            // |         |         |         |         |         |         |            | PG_DOWN |  LEFT   |  DOWN   |  RIGHT  |    ;    |         |
+            // |         |         |         |         |         |         |            |   INS   |  HOME   |         |   END   |         |         |
+            //                               |         |         |         |            |         |         |         |
+            bindings = <
+                &trans &trans &trans &trans &trans &trans                               &kp PAGE_UP &kp LA(LEFT) &kp UP &kp LA(RIGHT) &kp BSLH &kp DEL
+                &trans &trans &trans &trans &trans &trans                               &kp PAGE_DOWN &kp LEFT &kp DOWN &kp RIGHT &kp SEMI &trans
+                &trans &trans &trans &trans &trans &trans                               &kp INS &kp LG(LEFT) &none &kp LG(RIGHT) &none &trans
+                &trans &trans &trans                                                    &trans &trans &trans
+            >;
+        };
+        NavigationPC {
+            label = "Nav";
             // |         |         |         |         |         |         |            |         | L_WORD  |         | R_WORD  |         |         |
             // |         |         |         |         |         |         |            |         |         |         |         |         |         |
             // |         |         |         |         |         |         |            |         |  HOME   |   APP   |   END   |  SLCK   |         |
@@ -66,8 +94,8 @@
                 &trans &trans &trans                                                    &trans &trans &trans
             >;
         };
-        Function {
-            label = "Fn";
+        System {
+            label = "Sys";
             // |         |    1    |    2    |    3    |    4    |    5    |            |    6    |    7    |    8    |    9    |    0    |         |
             // |         |  BT 4   |  BT 3   |  BT 2   |  BT 1   |         |            |    -    |    [    |    ]    |    `    |    ;    |         |
             // |         | BT CLR  |         | TO Mac  |  TO PC  |         |            |         |    =    |         |         |    \    |         |
@@ -79,10 +107,6 @@
                 &trans &trans &trans                                                                &trans &trans &trans
             >;
         };
-        //&kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6
-        //&kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
-        // |   F7    |   F8    |   F9    |   F10   |   F11   |   F12   |
-        // |   F1    |   F2    |   F3    |   F4    |   F5    |   F6    |
         NewLayer {
             label = "New";
             // |         |         |         |         |         |         |            |         |         |         |         |         |         |
@@ -97,19 +121,27 @@
             >;
         };
     };
-    combos {
-        compatible = "zmk,combos";
-        combo_osl {
-            timeout-ms = <50>;
-            key-positions = <36 37 38>;
-            bindings = <&sl L_FN>;
-        };
-    };
     conditional_layers {
         compatible = "zmk,conditional-layers";
-        cl_pc_mod {
-            if-layers = <L_PC L_MOD>;
-            then-layer = <L_PC_MOD>;
+        cl_sym_pc {
+            if-layers = <L_PC L_FN>;
+            then-layer = <L_FN_PC>;
+        };
+        cl_nav_pc {
+            if-layers = <L_PC L_NAV>;
+            then-layer = <L_NAV_PC>;
+        };
+    };
+    combos {
+        compatible = "zmk,combos";
+        combo_sys_osl {
+            // |         |         |         |         |         |         |            |         |         |         |         |         |         |
+            // |         |         |         |         |         |         |            |         |         |         |         |         |         |
+            // |         |         |         |         |         |         |            |         |         |         |         |         |         |
+            //                               |    X    |    X    |    X    |            |         |         |         |
+            timeout-ms = <50>;
+            key-positions = <36 37 38>;
+            bindings = <&sl L_SYS>;
         };
     };
 };
